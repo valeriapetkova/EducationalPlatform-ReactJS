@@ -4,7 +4,7 @@ const router = require('express').Router();
 // const commentController = require('./controllers/commentController');
 // const topicController = require('./controllers/topicController');
 // const participantController = require('./controllers/participantController');
-// const userController = require('./controllers/userController');
+const userController = require('./controllers/userController');
 // const { attachCourseId } = require('./middlewares/attachCourseIdMiddleware');
 // const { isAuth } = require('./middlewares/authMiddleware');
 
@@ -25,6 +25,6 @@ router.get('/', (req, res) => {
 // router.use(`/courses/:courseId/topics`, attachCourseId, topicController);
 // router.use(`/courses/:courseId/participants`, isAuth, attachCourseId, participantController);
 
-// router.use('/users', userController);
+router.use('/users', userController);
 
 module.exports = router;
