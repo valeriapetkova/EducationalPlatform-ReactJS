@@ -16,3 +16,15 @@ Student Features:
 - Browse available courses and join those that like them
 - See all course details, including the course topics with more information about each topic
 - Create, update and delete their own comments
+
+# How to run
+Server
+- Install MongoDB
+- Navigate to server folder - cd server
+- Install all needed packages - npm install
+- Run the server - npm start
+
+Application
+- Navigate to client folder - cd client
+- Install all needed packages - npm install
+- Run the application - npm run dev
