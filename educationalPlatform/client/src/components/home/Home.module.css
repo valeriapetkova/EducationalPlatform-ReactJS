@@ -1,0 +1,129 @@
+.generalInfo {
+    background: linear-gradient(rgb(157, 201, 198), rgb(93, 199, 183));
+    padding: 1em;
+}
+
+.moreInfo {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: rgb(205, 241, 238);
+}
+
+.popularCourses {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background: linear-gradient(rgb(93, 199, 183), rgb(157, 201, 198));
+    color: rgb(4, 76, 78);
+}
+
+.generalContainer {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 40px;
+    gap: 2em;
+    max-width: 1400px;
+}
+
+.mainText {
+    color: white;
+    flex: 1 1 66%;
+}
+
+.mainText h2 {
+    padding-top: 0.8em;
+    padding-bottom: 0.5em;
+}
+
+.mainText h3 {
+    padding-top: 1.5em;
+}
+
+.mainText p {
+    font-size: 18px;
+}
+
+.regBtn, 
+.lgBtn {
+    text-decoration: none;
+    margin: 1em;
+    border: 2px solid rgb(205, 241, 238);
+    border-radius: 0.5em;
+    padding: 0.3em 0.9em;
+    font-size: 23px;
+}
+
+.regBtn {
+    color: rgb(205, 241, 238);
+    background-color: rgb(81, 177, 172);
+}
+
+.regBtn:hover {
+    color: rgb(4, 76, 78);
+}
+
+.lgBtn {
+    color: rgb(59, 128, 124);
+    background-color: rgb(205, 241, 238);
+}
+
+.lgBtn:hover {
+    color: rgb(4, 76, 78);
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 34%;
+    font-size: 17px;
+}
+
+.categories li {
+    list-style: none;
+    border: 1px solid rgb(81, 177, 172);
+    background-color: rgba(81, 177, 172, 0.7);
+    padding: 0.2em 0.5em 0.2em 0.1em;
+    margin: 0.1em;
+    color: rgb(4, 76, 78);
+
+}
+
+.textContainer {
+    display: flex;
+    gap: 2em;
+    max-width: 1400px;
+    font-size: 17px;
+    margin-top: 0.8em;
+}
+
+.textContainer p {
+    border: 1px solid rgb(205, 241, 238);;
+    padding: 5px 10px;
+    border-radius: 0.3em;
+    color: rgb(4, 76, 78);
+    background-color: rgba(81, 177, 172, 0.4);
+}
+
+.coursesContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.coursesContainer h4 {
+    color: rgb(68, 160, 155);
+    padding: 1em;
+    color: rgb(205, 241, 238);
+}
+
+.allCourses {
+    text-decoration: none;
+    color:rgb(4, 76, 78);
+}
+
+.allCourses:hover {
+    color: rgb(205, 241, 238);
+}
