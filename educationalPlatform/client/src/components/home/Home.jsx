@@ -1,25 +1,25 @@
-// import { useEffect, useState } from "react";
-// import { Link } from 'react-router-dom';
-// import { useContext } from 'react';
-// import AuthContext from '../../contexts/authContext';
-// import CourseItem from "../courses/course-item/CourseItem";
-// import * as courseService from '../../services/courseService';
+import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import AuthContext from '../../contexts/authContext';
+import CourseItem from "../courses/course-item/CourseItem";
+import * as courseService from '../../services/courseService';
 import styles from './Home.module.css';
 
 export default function Home() {
-    // const { isAuthenticated, email } = useContext(AuthContext);
-    // const [popularCourses, setPopularCourses] = useState([]); 
+    const { isAuthenticated, email } = useContext(AuthContext);
+    const [popularCourses, setPopularCourses] = useState([]); 
 
-    // useEffect(() => {
-    //     courseService.getPopularCourses()
-    //         .then(result => {
-    //             console.log(result);
-    //             setPopularCourses(result)
-    //         })
-    //         .catch(err => {
-    //             console.log(err); 
-    //         });
-    // }, [])
+    useEffect(() => {
+        courseService.getPopularCourses()
+            .then(result => {
+                console.log(result);
+                setPopularCourses(result)
+            })
+            .catch(err => {
+                console.log(err); 
+            });
+    }, [])
 
     return (
         <>
@@ -31,7 +31,7 @@ export default function Home() {
                         <div className={styles.mainText}>
                             <h2>Join different IT courses and learn new things</h2>
                             <p>Explore exciting courses in your favorite categories, challenge yourself and show your full potential</p>
-                            {/* <h3><Link to="/register" className={styles.regBtn}>Register</Link> <Link to="/login" className={styles.lgBtn}>Login</Link></h3> */}
+                            <h3><Link to="/register" className={styles.regBtn}>Register</Link> <Link to="/login" className={styles.lgBtn}>Login</Link></h3>
                         </div>
 
                         <div className={styles.categories}>
