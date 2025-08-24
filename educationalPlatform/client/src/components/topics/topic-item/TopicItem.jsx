@@ -54,9 +54,9 @@ export default function TopicItem({ _id, title, description, date, time, link,  
                     )}
     </Card>
 
-            {/* {editShow && (
+            {editShow && (
                 <TopicEdit {...topicInfo} />
-            )} */}
+            )}
     </>
     );
 }
