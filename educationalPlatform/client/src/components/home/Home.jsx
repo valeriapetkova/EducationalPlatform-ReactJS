@@ -58,15 +58,15 @@ export default function Home() {
                     <div className={styles.coursesContainer}>
                         <h3>The most popular courses</h3>
 
-                        {/* {popularCourses.map(course => (
+                        {popularCourses.map(course => (
                             <CourseItem key={course._id} {...course} />
-                        ))} */}
+                        ))}
                         
-                        {/* {popularCourses.length === 0 && (
+                        {popularCourses.length === 0 && (
                             <h4>There are no courses available yet</h4>
-                        )} */}
+                        )}
 
-                        {/* <h4><Link to="/courses" className={styles.allCourses}>See all courses</Link></h4> */}
+                        <h4><Link to="/courses" className={styles.allCourses}>See all courses</Link></h4>
                     </div>
                 </section>
             </div>
