@@ -48,9 +48,9 @@ export default function CommentItem({ _id, text, _ownerId }) {
                 )}
             </Card>
 
-            {/* {editShow && (
+            {editShow && (
                 <CommentEdit commentData={commentInfo} handleModal={onEditToggle} showModal={editShow}/>
-            )} */}
+            )}
         </>
     );
 }
