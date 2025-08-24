@@ -86,7 +86,7 @@ export default function CourseList() {
                     </Nav>
                 </div> 
                 
-                {/* {filteredCourses.length > 0 ? (
+                {filteredCourses.length > 0 ? (
                     filteredCourses.map(course => (
                         <CourseItem key={course._id} {...course} />
                     ))
@@ -94,7 +94,7 @@ export default function CourseList() {
                     : (
                         <p>No courses found!</p>
                     )
-                } */}
+                }
 
                 {/* {courses.map(course => (
                     // to do: to import course list item

@@ -24,9 +24,9 @@ export default function MyCourses() {
             <div className={styles.coursesContainer}>
                 <h2>Courses</h2>
 
-                {/* {courses.map(course => (
+                {courses.map(course => (
                     <CourseItem key={course._id} {...course} />
-                ))} */}
+                ))}
 
                 {courses.length === 0 && (
                     <h3>No courses yet</h3>
