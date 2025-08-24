@@ -29,7 +29,7 @@ export default function CommentList() {
                 <h3>No comments yet</h3>
             )}
 
-            {/* <CommentCreate /> */}
+            <CommentCreate />
         </div>
     );
 }
