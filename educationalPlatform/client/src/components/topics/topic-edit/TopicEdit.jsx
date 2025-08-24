@@ -16,14 +16,14 @@ export default function TopicEdit({ _id, title, description, date, time, link,  
         time,
         link,
         _ownerId,
-});
+    });
 
     const topicDATE = topic.date?.split('T')[0];
 
     const editTopicSubmitHandler = async (e) => {
-         e.preventDefault();
+        e.preventDefault();
 
-         const values = Object.fromEntries(new FormData(e.currentTarget));
+        const values = Object.fromEntries(new FormData(e.currentTarget));
 
         try {
             await topicService.edit(courseId, _id, values.title, values.description, values.date, values.time, values.link);
@@ -43,7 +43,7 @@ export default function TopicEdit({ _id, title, description, date, time, link,  
 
 
     return (
-       <>
+            <>
                     <Form onSubmit={editTopicSubmitHandler}>
                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                            <Form.Label>Title</Form.Label>
@@ -72,6 +72,6 @@ export default function TopicEdit({ _id, title, description, date, time, link,  
        
                        <Button variant="info" type="submit">Edit</Button>
                    </Form> 
-       </>
+            </>
     );
 }
