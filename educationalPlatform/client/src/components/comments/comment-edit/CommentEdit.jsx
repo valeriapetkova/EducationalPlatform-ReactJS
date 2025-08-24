@@ -39,7 +39,7 @@ export default function CommentEdit({  commentData, handleModal, showModal }) {
 
             navigate(`/courses/${courseId}/comments`);
         } catch (error) {
-            console.log(error); // some error handling here
+            console.log(error); 
         }
     }
 
