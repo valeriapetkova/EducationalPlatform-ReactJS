@@ -21,9 +21,9 @@ export default function CommentList() {
         <div>
             <h2>Comments</h2>
 
-            {/* {comments.map(comment => (
+            {comments.map(comment => (
                 <CommentItem key={comment._id} {...comment} />
-            ))} */}
+            ))}
 
             {comments.length === 0 && (
                 <h3>No comments yet</h3>
