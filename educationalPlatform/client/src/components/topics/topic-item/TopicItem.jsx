@@ -16,34 +16,34 @@ export default function TopicItem({ _id, title, description, date, time, link,  
     const topicInfo = { _id, title, description, date, time, link, _ownerId};
 
     const deleteTopicClickHandler = async () => {
-            try {
-                await topicService.remove(courseId, _id);
+        try {
+            await topicService.remove(courseId, _id);
     
-                setTopics(state => state.filter(t => t._id !== _id));
+            setTopics(state => state.filter(t => t._id !== _id));
     
-                navigate(`/courses/${courseId}/topics`);
-            } catch (error) {
-                console.log(error); 
-            }
+            navigate(`/courses/${courseId}/topics`);
+        } catch (error) {
+            console.log(error); 
         }
+    }
 
-        const onEditToggle = async () => {
-            setEditShow(true);
-        }
+    const onEditToggle = async () => {
+        setEditShow(true);
+    }
 
-        const topicDATE = date.split('T')[0].split('-').reverse().join('.');
+    const topicDATE = date.split('T')[0].split('-').reverse().join('.');
     
- return (
-    <>
-    <Card style={{ width: '18rem' }}>
-             <Card.Body>
-                 <Card.Text>{email}</Card.Text>
-                 <Card.Text>{title}</Card.Text>
-                 <Card.Text>{description}</Card.Text>
-                 <Card.Text>{topicDATE}</Card.Text>
-                 <Card.Text>{time}</Card.Text>
-                 <Card.Text>{link}</Card.Text>
-             </Card.Body>
+    return (
+        <>
+            <Card style={{ width: '18rem' }}>
+                <Card.Body>
+                    <Card.Text>{email}</Card.Text>
+                    <Card.Text>{title}</Card.Text>
+                    <Card.Text>{description}</Card.Text>
+                    <Card.Text>{topicDATE}</Card.Text>
+                    <Card.Text>{time}</Card.Text>
+                    <Card.Text>{link}</Card.Text>
+                </Card.Body>
                     {userId === _ownerId && (
                         <Card.Header>
                         <div>
@@ -52,11 +52,11 @@ export default function TopicItem({ _id, title, description, date, time, link,  
                         </div>
                         </Card.Header>
                     )}
-    </Card>
+                </Card>
 
             {editShow && (
                 <TopicEdit {...topicInfo} />
             )}
-    </>
+        </>
     );
 }
