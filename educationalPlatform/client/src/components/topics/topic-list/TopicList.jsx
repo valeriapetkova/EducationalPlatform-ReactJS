@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 
 import * as topicService from '../../../services/topicService';
-// import TopicItem from '../topic-item/TopicItem';
+import TopicItem from '../topic-item/TopicItem';
 // import TopicCreate from '../topic-create/TopicCreate';
 import { useParams } from 'react-router-dom';
 
@@ -26,9 +26,9 @@ export default function TopicList() {
         <div>
             <h2>Topics</h2>
 
-            {/* {topics.map(topic => (
+            {topics.map(topic => (
                 <TopicItem key={topic._id} {...topic} />
-            ))} */}
+            ))}
 
             {topics.length === 0 && (
                 <h3>No topics yet</h3>
