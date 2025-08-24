@@ -26,9 +26,9 @@ export default function ParticipantList() {
         <div>
             <h2>Participants</h2>
 
-            {/* {participants.map(participant => (
+            {participants.map(participant => (
                 <ParticipantItem key={participant._id} {...participant} />
-            ))} */}
+            ))}
 
             {participants.length === 0 && (
                 <h3>No participants yet</h3>
