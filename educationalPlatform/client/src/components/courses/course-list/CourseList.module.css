@@ -1,0 +1,36 @@
+.searchCourse {
+    max-width: 1400px;
+    text-align: center;
+    padding: 3em 8em;
+    background: linear-gradient(rgb(157, 201, 198), rgb(93, 199, 183));
+}
+
+input.searchText {
+    padding-right: 13em;
+    border: 3px solid rgb(80, 177, 172);
+    border-radius: 0.5em;
+}
+
+.coursesTitle {
+    color: rgb(80, 177, 172);
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.categoriesNav {
+    margin-bottom: 2em;
+}
+
+.coursesMsg {
+    text-align: center;
+}
+
+.categoriesNav .categoryField {
+    color: rgb(80, 177, 172);
+}
+
+.categoriesNav .categoryField:hover {
+    color: rgb(80, 177, 172);
+    font-weight: bold;
+}

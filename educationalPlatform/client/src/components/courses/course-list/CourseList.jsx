@@ -29,7 +29,7 @@ export default function CourseList() {
             .catch(error => {
                 console.log(error); 
             });
-        }, [query]);
+    }, [query]);
 
         const searchHandler = (e) => {
             e.preventDefault();
@@ -50,38 +50,40 @@ export default function CourseList() {
 
     return (
         <div>
-            <div>
-                <input type="text" placeholder="Search..." name="search" value={query} onChange={searchHandler}/>
+            <div className={styles.searchCourse}>
+                <input className={styles.searchText} type="text" placeholder="Search..." name="search" value={query} onChange={searchHandler}/>
             </div>
 
             <div className={styles.coursesContainer}>
-                <h2>Courses</h2>
+                <h3 className={styles.coursesTitle}>Courses</h3>
 
                  <div className={styles.categoriesNav}>
                     <Nav className="justify-content-center" variant="tabs" defaultActiveKey="/courses">
                         <Nav.Item>
-                            <Nav.Link eventKey="link-0" onClick={() => handleCategoryChange('All')}>All courses</Nav.Link>
+                            {/* <Nav.Link as={Link} to="/courses">All courses</Nav.Link> */}
+                            {/* <Nav.Link href="/courses">All courses</Nav.Link> */}
+                            <Nav.Link className={styles.categoryField} eventKey="link-0" onClick={() => handleCategoryChange('All')}>All courses</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-1" onClick={() => handleCategoryChange('Front-End Development')}>Front-End Development</Nav.Link>
+                            <Nav.Link className={styles.categoryField} eventKey="link-1" onClick={() => handleCategoryChange('Front-End Development')}>Front-End</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-2" onClick={() => handleCategoryChange('Back-End Development')}>Back-End Development</Nav.Link>
+                            <Nav.Link className={styles.categoryField} eventKey="link-2" onClick={() => handleCategoryChange('Back-End Development')}>Back-End</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-3" onClick={() => handleCategoryChange('Quality Assurance')}>Quality Assurance</Nav.Link>
+                            <Nav.Link className={styles.categoryField} eventKey="link-3" onClick={() => handleCategoryChange('Quality Assurance')}>QA</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-4" onClick={() => handleCategoryChange('Business Intelligence')}>Business Intelligence</Nav.Link>
+                            <Nav.Link className={styles.categoryField} eventKey="link-4" onClick={() => handleCategoryChange('Business Intelligence')}>Business Intelligence</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-5" onClick={() => handleCategoryChange('Infrastructure')}>Infrastructure</Nav.Link>
+                            <Nav.Link className={styles.categoryField} eventKey="link-5" onClick={() => handleCategoryChange('Infrastructure')}>Infrastructure</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-6" onClick={() => handleCategoryChange('Data Science')}>Data Science</Nav.Link>
+                            <Nav.Link className={styles.categoryField} eventKey="link-6" onClick={() => handleCategoryChange('Data Science')}>Data Science</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-7" onClick={() => handleCategoryChange('Mobile Development')}>Mobile Development</Nav.Link>
+                            <Nav.Link className={styles.categoryField} eventKey="link-7" onClick={() => handleCategoryChange('Mobile Development')}>Mobile Development</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </div> 
@@ -92,7 +94,7 @@ export default function CourseList() {
                     ))
                 )
                     : (
-                        <p>No courses found!</p>
+                        <p className={styles.coursesMsg}>There are no courses available yet</p>
                     )
                 }
 
