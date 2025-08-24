@@ -21,33 +21,33 @@ export const AuthProvider = ({
                     });
     }, [])
 
- const loginSubmitHandler = async (values) => {
-            try {
-                const result = await authService.login(values.email, values.password);
+    const loginSubmitHandler = async (values) => {
+        try {
+            const result = await authService.login(values.email, values.password);
     
-                setAuth(result);
+            setAuth(result);
     
-                navigate('/');
-            } catch (error) {
+            navigate('/');
+        } catch (error) {
                 console.log(error);
-            }
-        };
+        }
+    };
 
-     const registerSubmitHandler = async (values) => {
-                try {
-                    const result = await authService.register(values.firstName, values.lastName, values.role, values.username, values.email, values.password, values.repeatPassword);
+    const registerSubmitHandler = async (values) => {
+        try {
+            const result = await authService.register(values.firstName, values.lastName, values.role, values.username, values.email, values.password, values.repeatPassword);
         
-                    setAuth(result);
+            setAuth(result);
         
-                    navigate('/');
-                } catch (error) {
-                    console.log(error);
-                }
-            };
+            navigate('/');
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
-         const logoutHandler = () => {
-                    setAuth({});
-                }
+    const logoutHandler = () => {
+        setAuth({});
+    }
 
     const userValues = {
         registerSubmitHandler,
